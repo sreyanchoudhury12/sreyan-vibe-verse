@@ -17,7 +17,7 @@ const SreyanHero: React.FC = () => {
           Hi, I'm <span className="text-pink-500">Sreyan</span>
         </h1>
         <p className="text-slate-200/90 max-w-lg text-lg md:text-xl mt-2 animate-fade-in">
-          Welcome to my TikTok-inspired web playground. Enjoy flashy visuals, smooth animations, and a taste of what modern social apps feel like!
+          Welcome to my web playground. Enjoy flashy visuals, smooth animations, and a taste of what modern social apps feel like!
         </p>
         <a
           href="https://www.tiktok.com/"
@@ -43,7 +43,7 @@ const SreyanHero: React.FC = () => {
               </div>
             </div>
             <div className="mt-4 text-white text-base">
-              Just built this TikTok-inspired site with animated intro! 🚀✨
+              Just built this site with animated intro! 🚀✨
             </div>
             <div className="mt-3 flex items-center gap-4">
               <button className="flex-1 flex items-center justify-center px-3 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 text-white font-medium transition">

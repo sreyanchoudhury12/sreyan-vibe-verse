@@ -65,9 +65,6 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
             </defs>
           </svg>
         </div>
-        <div className="mt-10 text-white/80 tracking-wide text-base md:text-lg animate-fade-in">
-          Inspired by <span className="text-pink-500 font-medium">TikTok</span>
-        </div>
       </div>
     </div>
   );
