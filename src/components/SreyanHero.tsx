@@ -3,7 +3,7 @@ import React from "react";
 import { Instagram } from "lucide-react";
 import SreyanLogo from "./SreyanLogo";
 
-const profilePic = "https://static.lovablecdn.com/img/placeholder-avatar.png"; // Placeholder, swap with your own later.
+const profilePic = "/lovable-uploads/07577f95-6c87-426a-bc48-6a6de3d436c0.png"; // Updated to use uploaded image
 const logoImgUrl = "/lovable-uploads/fe4ad9c2-c9e6-4af3-87f2-135c480d0f2d.png";
 const bgBanner =
   "/lovable-uploads/1c081b80-47c3-4fda-918d-cabde9096118.png";
@@ -88,4 +88,3 @@ const SreyanHero: React.FC = () => {
 };
 
 export default SreyanHero;
-
