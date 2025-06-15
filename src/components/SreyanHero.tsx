@@ -1,8 +1,11 @@
+
 import React from "react";
 import { Instagram } from "lucide-react";
 import SreyanLogo from "./SreyanLogo";
 
 const profilePic = "https://static.lovablecdn.com/img/placeholder-avatar.png"; // Placeholder, swap with your own later.
+
+const logoImgUrl = "/lovable-uploads/fe4ad9c2-c9e6-4af3-87f2-135c480d0f2d.png";
 
 const SreyanHero: React.FC = () => {
   return (
@@ -56,10 +59,15 @@ const SreyanHero: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* Edge floating shape now with logo text */}
+      {/* Edge floating shape now with uploaded image as logo */}
       <div className="absolute top-6 right-4 md:right-24 w-24 h-24 bg-gradient-to-br from-fuchsia-400/80 to-cyan-300/40 blur-2xl rounded-full opacity-60 pointer-events-none flex items-center justify-center animate-fade-in">
-        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/30 shadow-lg">
-          <SreyanLogo />
+        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/30 shadow-lg overflow-hidden">
+          <img
+            src={logoImgUrl}
+            alt="Sreyan logo"
+            className="object-contain w-12 h-12 select-none"
+            draggable={false}
+          />
         </div>
       </div>
     </div>
@@ -67,3 +75,4 @@ const SreyanHero: React.FC = () => {
 };
 
 export default SreyanHero;
+
