@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from "react";
+import { Instagram } from "lucide-react";
 
 interface SreyanIntroProps {
   onFinish: () => void;
@@ -12,67 +13,40 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
     const t = setTimeout(() => {
       setShow(false);
       setTimeout(onFinish, 600); // wait for fade out
-    }, 2500); // 2.5s intro
+    }, 2500);
     return () => clearTimeout(t);
   }, [onFinish]);
 
   return (
     <div
-      className={`fixed z-50 inset-0 flex flex-col items-center justify-center bg-black transition-opacity duration-600 ${
+      className={`fixed z-50 inset-0 flex items-center justify-center transition-opacity duration-600 ${
         show ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+      style={{
+        background: "radial-gradient(circle at 70% 10%, #f99e5b, transparent 55%), linear-gradient(120deg,#fdf497 0%,#fdf497 8%,#fd5949 45%,#d6249f 60%,#285AEB 100%)",
+      }}
     >
-      <div className="flex flex-col items-center">
-        <div className="text-[2.2rem] md:text-[3.5rem] font-bold text-white mb-2 tracking-tight animate-[glow_1.5s_ease-in-out_infinite_alternate] relative">
-          <span className="relative z-10 drop-shadow-glow">Welcome to Sreyan&#39;s Web</span>
-          <span className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-pink-500 via-blue-400 to-cyan-400 blur-lg opacity-80 animate-pulse" />
+      <div className="flex flex-col items-center justify-center">
+        <div className="bg-gradient-to-tl from-pink-500 via-purple-500 to-yellow-400 rounded-full p-5 shadow-2xl animate-scale-in mb-5">
+          <Instagram size={52} className="text-white drop-shadow-glow" />
         </div>
-        {/* Animated instagram-inspired subtitle */}
-        <div
-          className="mt-2 text-base md:text-lg text-slate-200 font-medium animate-fade-in"
-          style={{ animationDelay: "0.9s", animationFillMode: "both" }}
+        <span
+          className="text-[2.6rem] md:text-[3.7rem] font-extrabold tracking-tight text-white drop-shadow-glow animate-fade-in"
+          style={{
+            letterSpacing: "-1.5px",
+            textShadow: "0 0 20px #d6249f, 0 0 2px #fd5949"
+          }}
         >
-          which is inspired by <span className="text-pink-400 font-semibold">instagram</span>
-        </div>
-        <style>
-          {`
-          @keyframes glow {
-            0% { text-shadow: 0 0 16px #0ff, 0 0 32px #f0f, 0 0 48px #0ff; }
-            100% { text-shadow: 0 0 8px #f0f, 0 0 16px #0ff, 0 0 24px #f0f; }
-          }
-          .drop-shadow-glow {
-            filter: drop-shadow(0 0 18px #f0f) drop-shadow(0 0 32px #0ff);
-          }
-        `}
-        </style>
-        <div className="mt-4 animate-fade-in">
-          <svg width="50" height="50" className="mx-auto">
-            <circle
-              cx="25"
-              cy="25"
-              r="20"
-              fill="none"
-              stroke="url(#gradient)"
-              strokeWidth="5"
-              strokeDasharray="62.8"
-              strokeDashoffset="20"
-            >
-              <animate
-                attributeName="stroke-dashoffset"
-                values="62.8;0;62.8"
-                dur="1.7s"
-                repeatCount="indefinite"
-              />
-            </circle>
-            <defs>
-              <linearGradient id="gradient">
-                <stop offset="0%" stopColor="#f0f" />
-                <stop offset="100%" stopColor="#0ff" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+          Sreyan&#39;s Web
+        </span>
       </div>
+      <style>
+        {`
+        .drop-shadow-glow {
+          filter: drop-shadow(0 0 10px #fd5949) drop-shadow(0 0 20px #d6249f);
+        }
+        `}
+      </style>
     </div>
   );
 };
