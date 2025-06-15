@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const profilePic = "https://static.lovablecdn.com/img/placeholder-avatar.png"; // Placeholder, swap with your own later.
 
@@ -20,13 +20,13 @@ const SreyanHero: React.FC = () => {
           Welcome to my web playground. Enjoy flashy visuals, smooth animations, and a taste of what modern social apps feel like!
         </p>
         <a
-          href="https://www.tiktok.com/"
+          href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-cyan-400 hover:from-cyan-400 hover:to-pink-500 text-white rounded-xl shadow-lg text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-200 animate-fade-in"
         >
-          <Youtube className="w-6 h-6 opacity-80" />
-          See My TikToks
+          <Instagram className="w-6 h-6 opacity-80" />
+          See My Insta
         </a>
         <div className="mt-10 md:mt-8">
           {/* TikTok-style sample card */}
