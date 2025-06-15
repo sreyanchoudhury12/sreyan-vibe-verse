@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-import { Instagram } from "lucide-react";
 
 interface SreyanIntroProps {
   onFinish: () => void;
@@ -23,18 +22,46 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
         show ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       style={{
-        background: "radial-gradient(circle at 70% 10%, #f99e5b, transparent 55%), linear-gradient(120deg,#fdf497 0%,#fdf497 8%,#fd5949 45%,#d6249f 60%,#285AEB 100%)",
+        background:
+          "radial-gradient(circle at 70% 10%, #f99e5b, transparent 55%), linear-gradient(120deg,#fdf497 0%,#fdf497 8%,#fd5949 45%,#d6249f 60%,#285AEB 100%)",
       }}
     >
       <div className="flex flex-col items-center justify-center">
-        <div className="bg-gradient-to-tl from-pink-500 via-purple-500 to-yellow-400 rounded-full p-5 shadow-2xl animate-scale-in mb-5">
-          <Instagram size={52} className="text-white drop-shadow-glow" />
+        {/* Animated Instagram-inspired gradient ring SVG */}
+        <div className="mb-5 animate-scale-in">
+          <svg width="72" height="72" viewBox="0 0 72 72" className="mx-auto">
+            <defs>
+              <linearGradient id="ig-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fdf497" />
+                <stop offset="20%" stopColor="#fd5949" />
+                <stop offset="70%" stopColor="#d6249f" />
+                <stop offset="100%" stopColor="#285AEB" />
+              </linearGradient>
+            </defs>
+            <circle
+              cx="36"
+              cy="36"
+              r="30"
+              fill="none"
+              stroke="url(#ig-ring)"
+              strokeWidth="7"
+              strokeDasharray="188.4"
+              strokeDashoffset="50"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="188.4;0;188.4"
+                dur="1.7s"
+                repeatCount="indefinite"
+              />
+            </circle>
+          </svg>
         </div>
         <span
           className="text-[2.6rem] md:text-[3.7rem] font-extrabold tracking-tight text-white drop-shadow-glow animate-fade-in"
           style={{
             letterSpacing: "-1.5px",
-            textShadow: "0 0 20px #d6249f, 0 0 2px #fd5949"
+            textShadow: "0 0 20px #d6249f, 0 0 2px #fd5949",
           }}
         >
           Sreyan&#39;s Web
@@ -52,3 +79,4 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
 };
 
 export default SreyanIntro;
+
