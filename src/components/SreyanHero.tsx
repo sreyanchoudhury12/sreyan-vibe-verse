@@ -4,12 +4,25 @@ import { Instagram } from "lucide-react";
 import SreyanLogo from "./SreyanLogo";
 
 const profilePic = "https://static.lovablecdn.com/img/placeholder-avatar.png"; // Placeholder, swap with your own later.
-
 const logoImgUrl = "/lovable-uploads/fe4ad9c2-c9e6-4af3-87f2-135c480d0f2d.png";
+const bgBanner =
+  "/lovable-uploads/1c081b80-47c3-4fda-918d-cabde9096118.png";
 
 const SreyanHero: React.FC = () => {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-8 py-8 md:py-20 bg-gradient-to-br from-black via-zinc-900 to-gray-900">
+    <div className="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-8 py-8 md:py-20 bg-gradient-to-br from-black via-zinc-900 to-gray-900 overflow-hidden">
+      {/* Background banner image */}
+      <img
+        src={bgBanner}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none select-none opacity-60"
+        style={{ minHeight: "100%", minWidth: "100%" }}
+        draggable={false}
+      />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      {/* Main content */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-5 md:space-y-7 z-10">
         <img
           src={profilePic}
