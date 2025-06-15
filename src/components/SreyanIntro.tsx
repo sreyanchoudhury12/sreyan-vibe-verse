@@ -27,6 +27,13 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
           <span className="relative z-10 drop-shadow-glow">Welcome to Sreyan&#39;s Web</span>
           <span className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-pink-500 via-blue-400 to-cyan-400 blur-lg opacity-80 animate-pulse" />
         </div>
+        {/* Animated instagram-inspired subtitle */}
+        <div
+          className="mt-2 text-base md:text-lg text-slate-200 font-medium animate-fade-in"
+          style={{ animationDelay: "0.9s", animationFillMode: "both" }}
+        >
+          which is inspired by <span className="text-pink-400 font-semibold">instagram</span>
+        </div>
         <style>
           {`
           @keyframes glow {
