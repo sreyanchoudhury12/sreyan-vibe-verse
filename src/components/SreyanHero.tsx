@@ -1,6 +1,6 @@
-
 import React from "react";
-import { Instagram, Circle } from "lucide-react";
+import { Instagram } from "lucide-react";
+import SreyanLogo from "./SreyanLogo";
 
 const profilePic = "https://static.lovablecdn.com/img/placeholder-avatar.png"; // Placeholder, swap with your own later.
 
@@ -56,10 +56,10 @@ const SreyanHero: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* Edge floating shape with logo */}
+      {/* Edge floating shape now with logo text */}
       <div className="absolute top-6 right-4 md:right-24 w-24 h-24 bg-gradient-to-br from-fuchsia-400/80 to-cyan-300/40 blur-2xl rounded-full opacity-60 pointer-events-none flex items-center justify-center animate-fade-in">
         <div className="flex items-center justify-center w-14 h-14 rounded-full bg-white/30 shadow-lg">
-          <Circle className="w-8 h-8 text-cyan-800 opacity-90" strokeWidth={2.2} />
+          <SreyanLogo />
         </div>
       </div>
     </div>
@@ -67,4 +67,3 @@ const SreyanHero: React.FC = () => {
 };
 
 export default SreyanHero;
-
