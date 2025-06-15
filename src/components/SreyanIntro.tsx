@@ -23,8 +23,8 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
       }`}
     >
       <div className="flex flex-col items-center">
-        <div className="text-[3rem] md:text-[5rem] font-bold text-white mb-2 tracking-tight animate-[glow_1.5s_ease-in-out_infinite_alternate] relative">
-          <span className="relative z-10 drop-shadow-glow">Sreyan</span>
+        <div className="text-[2.2rem] md:text-[3.5rem] font-bold text-white mb-2 tracking-tight animate-[glow_1.5s_ease-in-out_infinite_alternate] relative">
+          <span className="relative z-10 drop-shadow-glow">Welcome to Sreyan&#39;s Web</span>
           <span className="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-pink-500 via-blue-400 to-cyan-400 blur-lg opacity-80 animate-pulse" />
         </div>
         <style>
