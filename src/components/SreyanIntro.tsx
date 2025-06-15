@@ -27,35 +27,14 @@ const SreyanIntro: React.FC<SreyanIntroProps> = ({ onFinish }) => {
       }}
     >
       <div className="flex flex-col items-center justify-center">
-        {/* Animated Instagram-inspired gradient ring SVG */}
-        <div className="mb-5 animate-scale-in">
-          <svg width="72" height="72" viewBox="0 0 72 72" className="mx-auto">
-            <defs>
-              <linearGradient id="ig-ring" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#fdf497" />
-                <stop offset="20%" stopColor="#fd5949" />
-                <stop offset="70%" stopColor="#d6249f" />
-                <stop offset="100%" stopColor="#285AEB" />
-              </linearGradient>
-            </defs>
-            <circle
-              cx="36"
-              cy="36"
-              r="30"
-              fill="none"
-              stroke="url(#ig-ring)"
-              strokeWidth="7"
-              strokeDasharray="188.4"
-              strokeDashoffset="50"
-            >
-              <animate
-                attributeName="stroke-dashoffset"
-                values="188.4;0;188.4"
-                dur="1.7s"
-                repeatCount="indefinite"
-              />
-            </circle>
-          </svg>
+        {/* Logo with animated entrance */}
+        <div className="mb-6 animate-scale-in drop-shadow-glow">
+          <img
+            src="/lovable-uploads/2a675d51-71e2-4df7-b5db-6e2710292fbf.png"
+            alt="Sreyan Logo"
+            className="w-28 h-28 md:w-32 md:h-32 object-contain rounded-2xl shadow-2xl border-4 border-white/20 bg-black/30"
+            draggable={false}
+          />
         </div>
         <span
           className="text-[2.6rem] md:text-[3.7rem] font-extrabold tracking-tight text-white drop-shadow-glow animate-fade-in"
