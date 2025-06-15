@@ -22,7 +22,7 @@ const SreyanHero: React.FC = () => {
         <p className="text-slate-200/90 max-w-lg text-lg md:text-xl mt-2 animate-fade-in">
           Welcome to my web playground. Enjoy flashy visuals, smooth animations, and a taste of what modern social apps feel like!
         </p>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-cyan-400 hover:from-cyan-400 hover:to-pink-500 text-white rounded-xl shadow-lg text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-200 animate-fade-in">
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=GBNrdJnDicIxcZuo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-cyan-400 hover:from-cyan-400 hover:to-pink-500 text-white rounded-xl shadow-lg text-lg md:text-xl font-semibold hover:scale-105 transition-all duration-200 animate-fade-in">
           <Instagram className="w-6 h-6 opacity-80" />
           See My Insta
         </a>
